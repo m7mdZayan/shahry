@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  outline: none;
+  width: 216px;
+  height: 35px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: $secondary-button-bg;
+  color: $secondary-button-color;
+}
