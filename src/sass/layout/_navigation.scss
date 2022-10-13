@@ -1,54 +1,54 @@
-.navbar{
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: $card-bg;
-padding: .5rem 12rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $card-bg;
+  padding: 0.5rem 12rem;
 
-&__logo{
+  &__logo {
     max-height: 100px;
     max-width: 200px;
     overflow: hidden;
 
-    img{
-        width: 100%;
-        height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
     }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 0.7rem;
+      font-size: 1.8rem;
+    }
+  }
 }
 
-    &__account{
-        display: flex;
-        align-items: center;
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.2rem 5rem;
 
-        span{
-            margin-left: .7rem;
-            font-size: 1.8rem;
-        }
+    &__logo {
+      max-height: 100px;
+      max-width: 150px;
     }
+  }
 }
 
-@media ( max-width:900px ) {
-    .navbar{
-        padding: .2rem 5rem;
+@media (max-width: 550px) {
+  .navbar {
+    padding: 0 4rem;
 
-        &__logo{
-            max-height: 100px;
-            max-width: 150px;
-        }
+    &__logo {
+      max-height: 100px;
+      max-width: 120px;
     }
-}
 
-@media ( max-width:550px ) {
-    .navbar{
-        padding: 0 4rem;
-
-        &__logo{
-            max-height: 100px;
-            max-width: 120px;
-        }
-
-        span{
-            font-size: 1.5rem;
-        }
+    span {
+      font-size: 1.5rem;
     }
+  }
 }
