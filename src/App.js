@@ -1,7 +1,12 @@
+import Navbar from "./components/Navbar";
+
+
+const accountImg = "https://randomuser.me/api/portraits/men/3.jpg"
+
 
 function App() {
   return (
-    <p className="test__text"> Hello Shahry! </p>
+    <Navbar userName="Mohamed Zayan" accountImg={accountImg} />
   );
 }
 
