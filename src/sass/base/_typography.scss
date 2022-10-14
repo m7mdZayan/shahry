@@ -1,6 +1,9 @@
 :root {
-  font-family: $font-name;
   font-size: 62.5%;
+}
+
+body {
+  font-family: $font-name !important;
 }
 
 .header__content--text {

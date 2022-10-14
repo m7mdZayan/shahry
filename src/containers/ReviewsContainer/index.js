@@ -12,6 +12,7 @@ const ReviewContainer = ({ reviewsArray }) => {
           rateValue={review.rateValue}
           reviewText={review.reviewText}
           imgSrc={review.imgSrc}
+          comments={review.comments}
         />
       ))}
     </div>
