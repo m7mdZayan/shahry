@@ -1,10 +1,6 @@
-import { useState } from "react";
 import ReviewCard from "../../components/ReviewCard";
-import { reviews } from "../../constants/reviews";
 
-const ReviewContainer = () => {
-  const [reviewsArray, setReviewsArray] = useState(reviews);
-
+const ReviewContainer = ({ reviewsArray }) => {
   return (
     <div className="reviews-container">
       {reviewsArray.map((review) => (

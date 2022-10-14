@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReviewModal from "../ReviewModal";
 
-const Header = () => {
+const Header = ({ setReviewsArray }) => {
   const [reviewModalIsOpen, setreviewModalIsOpen] = useState(false);
 
   function openModal() {
@@ -23,7 +23,11 @@ const Header = () => {
         </button>
       </div>
 
-      <ReviewModal isOpen={reviewModalIsOpen} onRequestClose={closeModal} />
+      <ReviewModal
+        setReviewsArray={setReviewsArray}
+        isOpen={reviewModalIsOpen}
+        onRequestClose={closeModal}
+      />
     </header>
   );
 };
