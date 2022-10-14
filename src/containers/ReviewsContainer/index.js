@@ -1,39 +1,23 @@
+import { useState } from "react";
 import ReviewCard from "../../components/ReviewCard";
+import { reviews } from "../../constants/reviews";
 
 const ReviewContainer = () => {
+  const [reviewsArray, setReviewsArray] = useState(reviews);
+
   return (
     <div className="reviews-container">
-      <ReviewCard
-        userName="Mustafa Balaha"
-        date="20 dec 2020"
-        title="Best App Ever !"
-        rateValue={5}
-        reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      />
-
-      <ReviewCard
-        userName="Mustafa Balaha"
-        date="20 dec 2020"
-        title="Best App Ever !"
-        rateValue={5}
-        reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      />
-
-      <ReviewCard
-        userName="Mustafa Balaha"
-        date="20 dec 2020"
-        title="Best App Ever !"
-        rateValue={5}
-        reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      />
-
-      <ReviewCard
-        userName="Mustafa Balaha"
-        date="20 dec 2020"
-        title="Best App Ever !"
-        rateValue={5}
-        reviewText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      />
+      {reviewsArray.map((review) => (
+        <ReviewCard
+          key={review.date}
+          userName={review.userName}
+          date={review.date}
+          title={review.title}
+          rateValue={review.rateValue}
+          reviewText={review.reviewText}
+          imgSrc={review.imgSrc}
+        />
+      ))}
     </div>
   );
 };
