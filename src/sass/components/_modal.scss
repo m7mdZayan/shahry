@@ -1,0 +1,33 @@
+.ant-modal-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ant-modal-root {
+  label {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.modal__input {
+  margin-bottom: 15px;
+
+  input,
+  textarea {
+    border: 1px solid #d8d8d8;
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background-color: $input-fields-color;
+    padding: 10px;
+    font-family: inherit;
+  }
+
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+}
