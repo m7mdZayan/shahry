@@ -1,4 +1,4 @@
-import { Modal, Rate } from "antd";
+import { Modal, Rate, message } from "antd";
 import { useState } from "react";
 import { getDateNow } from "../../util/functions";
 
@@ -23,6 +23,7 @@ const ReviewModal = ({ isOpen, onRequestClose, setReviewsArray }) => {
       reviewText: reviewDetails,
     };
     setReviewsArray((d) => [newReview, ...d]);
+    message.success("Your Review was added Successfully!");
     resetInputValues();
     onRequestClose();
   };
