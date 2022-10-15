@@ -11,3 +11,9 @@ body {
   font-size: 5rem;
   text-transform: uppercase;
 }
+
+@media (max-width: 900px) {
+  .header__content--text {
+    font-size: 4rem;
+  }
+}

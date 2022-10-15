@@ -1,6 +1,5 @@
 .rate {
   display: flex;
-  //   padding: 1.5rem;
   border: 1px solid $comment-bg;
   align-items: center;
   height: 50px;
@@ -24,5 +23,18 @@
 
   &__value {
     margin: 0 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .rate {
+    &__icon {
+      width: 35px;
+      margin-right: 0.8rem;
+    }
+
+    &__value {
+      margin: 0 1rem;
+    }
   }
 }
