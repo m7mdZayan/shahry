@@ -1,7 +1,7 @@
-import { Rate } from "antd";
 import { useState } from "react";
 import Comment from "../Comment";
 import AddComment from "../AddComment";
+import Rating from "../Rating";
 
 const ReviewCard = ({ review, reviewsArray }) => {
   const [showCommentInput, setShowCommentInput] = useState(false);
@@ -16,7 +16,7 @@ const ReviewCard = ({ review, reviewsArray }) => {
       <p className="card__name">{review.userName}</p>
       <span className="card__date">{review.date}</span>
       <h3 className="card__heading">{review.title}</h3>
-      <Rate disabled defaultValue={review.rateValue} />
+      <Rating value={review.rateValue} />
       <p className="card__text">{review.reviewText}</p>
       {review.comments?.map((comment) => (
         <Comment
