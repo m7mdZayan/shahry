@@ -18,3 +18,19 @@
     top: 45px;
   }
 }
+
+.add-comment {
+  min-width: 80%;
+  text-align: center;
+}
+
+.comment-input {
+  border: none;
+  outline: none;
+  display: block;
+  min-width: 60%;
+  min-height: 200px;
+  background-color: $comment-bg;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+}

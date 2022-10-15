@@ -1,18 +1,14 @@
 import ReviewCard from "../../components/ReviewCard";
 
-const ReviewContainer = ({ reviewsArray }) => {
+const ReviewContainer = ({ reviewsArray, setReviewsArray }) => {
   return (
     <div className="reviews-container">
       {reviewsArray.map((review) => (
         <ReviewCard
-          key={review.date}
-          userName={review.userName}
-          date={review.date}
-          title={review.title}
-          rateValue={review.rateValue}
-          reviewText={review.reviewText}
-          imgSrc={review.imgSrc}
-          comments={review.comments}
+          key={review.id}
+          review={review}
+          reviewsArray={reviewsArray}
+          setReviewsArray={setReviewsArray}
         />
       ))}
     </div>

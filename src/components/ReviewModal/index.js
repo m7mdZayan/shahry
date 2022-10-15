@@ -15,12 +15,13 @@ const ReviewModal = ({ isOpen, onRequestClose, setReviewsArray }) => {
 
   const addReviewHandler = () => {
     const newReview = {
-      imgSrc: "https://randomuser.me/api/portraits/men/33.jpg",
+      imgSrc: "https://randomuser.me/api/portraits/men/3.jpg",
       userName: "Mohamed Zayan",
       date: getDateNow(),
       title: reviewTitle,
       rateValue: ratevalue,
       reviewText: reviewDetails,
+      comments: [],
     };
     setReviewsArray((d) => [newReview, ...d]);
     message.success("Your Review was added Successfully!");
